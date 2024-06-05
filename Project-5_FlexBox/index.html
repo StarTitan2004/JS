@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="panels">
+        <div class="panel panel1">
+            <p>Our Natural Satellite</p>
+            <p>Moon</p>
+            <p>through Nikon 100P</p>
+
+
+        </div>
+        <div class="panel panel2">
+            <p>Ringed Planet</p>
+            <p>Saturn</p>
+            <p>through Celestron Astromster Telescope</p>
+
+        </div>
+        <div class="panel panel3">
+            <p>Largest planet of Solar System</p>
+            <p>Jupiter</p>
+            <p>through Astromaster 114eq Telescope</p>
+
+        </div>
+        <div class="panel panel4">
+            <p>Newest Crater of Moon</p>
+            <p>Copernicus Crater</p>
+            <p>through LCM 114 Telescope</p>
+
+        </div>
+        <div class="panel panel5">
+            <p>Last</p>
+            <p>Solar Eclipse</p>
+            <p>visible from India(this decade)</p>
+
+        </div>
+        
+
+    </div>
+
+
+
+
+    <script>
+        const panels = document.querySelectorAll('.panel');
+    
+        function toggleOpen() {
+          console.log('Hello');
+          this.classList.toggle('open');
+        }
+    
+        function toggleActive(e) {
+          console.log(e.propertyName);
+          if (e.propertyName.includes('flex')) {
+            this.classList.toggle('open-active');
+          }
+        }
+    
+        panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+        panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+      </script>
+    
+
+
+</body>
+</html>
